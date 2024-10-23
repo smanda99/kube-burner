@@ -74,8 +74,8 @@ func initCmd() *cobra.Command {
 	var err error
 	var clientSet kubernetes.Interface
 	var kubeConfig, kubeContext string
-	var metricsEndpoint, configFile , configMap, metricsProfile , alertProfile string
-	var uuid, userMetadata , namespace string
+	var metricsEndpoint, configFile, configMap, metricsProfile, alertProfile string
+	var uuid, userMetadata, namespace string
 	var skipTLSVerify bool
 	var timeout time.Duration
 	var rc int
@@ -137,7 +137,7 @@ func initCmd() *cobra.Command {
 	cmd.Flags().StringVar(&kubeConfig, "kubeconfig", "", "Path to the kubeconfig file")
 	cmd.Flags().StringVar(&kubeContext, "kube-context", "", "The name of the kubeconfig context to use")
 	cmd.Flags().SortFlags = false
-	cmd.MarkFlagsMutuallyExclusive("config","configmap")
+	cmd.MarkFlagsMutuallyExclusive("config", "configmap")
 	return cmd
 }
 
